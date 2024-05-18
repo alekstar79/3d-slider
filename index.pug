@@ -7,9 +7,9 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    link(rel='shortcut icon', href='favicon.png', type='image/png')
+    link(rel='shortcut icon', href='./favicon.png', type='image/png')
     title 3D Slider
-    link(rel='stylesheet', href='style.css')
+    link(rel='stylesheet', href='./style.css')
   body
     #slider.slider(style="--img-prev:url(" + images[0] + ");")
       #slider-content.slider__content
@@ -20,10 +20,10 @@ html(lang='en')
               - imgClassName += ' slider__images-item--active';
             div(class=imgClassName, data-id=index + 1)
               img(src=src, alt="")
-        
+
         .slider__text
           - var i = 0;
-          
+
           each text, key in texts
             - var textClassName = 'slider__text-item';
             if ++i === 1
@@ -33,18 +33,18 @@ html(lang='en')
                 h3= key
               .slider__text-item-info
                 p= text
-              
+
       .slider__nav
         .slider__nav-arrows
           #left.slider__nav-arrow.slider__nav-arrow--left to left
           #right.slider__nav-arrow.slider__nav-arrow--right to right
-            
+
         #slider-dots.slider__nav-dots
           .slider__nav-dot.slider__nav-dot--active(data-id='1')
           .slider__nav-dot(data-id='2')
           .slider__nav-dot(data-id='3')
           .slider__nav-dot(data-id='4')
           .slider__nav-dot(data-id='5')
-            
-    script(src='slider.js')
-    script(src='index.js')
+
+    script(src='./slider.js')
+    script(src='./index.js')
